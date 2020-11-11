@@ -18,7 +18,7 @@ public class Main extends Application {
     private static double x = 0;
 
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage stage) {
         GridPane root = new GridPane();
         Scene scene = new Scene(root, Screen.getPrimary().getBounds().getWidth(), 500);
         stage.setScene(scene);
