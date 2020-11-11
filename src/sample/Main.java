@@ -13,6 +13,11 @@ import javafx.stage.Stage;
 import java.util.Timer;
 import java.util.TimerTask;
 
+//
+// LINK TO JAR BELOW :)
+//
+//https://drive.google.com/file/d/1YiyXCO8WmT3B-gfmMghtSYAQC-uA0tKM/view?usp=sharing 
+
 public class Main extends Application {
 
     private static double x = 0;
