@@ -1,15 +1,12 @@
 package sample;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 
@@ -33,18 +30,14 @@ public class Main extends Application {
         g.setLineWidth(5);
 
 
-
         stage.show();
-
 
 
         Timer timer = new Timer();
 
-        TimerTask task = new TimerTask()
-        {
-            public void run()
-            {
-                iterate(g,canvas);
+        TimerTask task = new TimerTask() {
+            public void run() {
+                iterate(g, canvas);
             }
 
         };
@@ -53,7 +46,7 @@ public class Main extends Application {
         scene.setOnKeyPressed(e -> {
             if (e.getCode() == KeyCode.SPACE) {
                 System.out.println("A key was pressed");
-                timer.schedule(task, 1,30);
+                timer.schedule(task, 1, 30);
             }
         });
 
@@ -62,7 +55,7 @@ public class Main extends Application {
     private static void iterate(GraphicsContext g, Canvas canvas) {
         double y = Math.sin(x);
         System.out.println("(" + x + ";" + y + ")");
-        g.strokeLine(100 * x, canvas.getHeight()/2, 100 * x, canvas.getHeight()/2 - y * 100);
+        g.strokeLine(100 * x, canvas.getHeight() / 2, 100 * x, canvas.getHeight() / 2 - y * 100);
         x += 0.1;
         System.out.println("(" + x + ";" + y + ")");
     }
